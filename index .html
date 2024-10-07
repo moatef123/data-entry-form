@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <title>Data Entry Form for Valerian</title>
 </head>
 <body>
     <section class="hero is-primary is-bold">
@@ -117,8 +120,8 @@
             })
             .catch(function (error) {
                 // Handle errors
-                console.error(error);
-                document.getElementById("message").textContent = "An error occurred while submitting the form.";
+                console.error("Error details:", error);
+                document.getElementById("message").textContent = "An error occurred while submitting the form: " + error.message;
                 document.getElementById("message").style.display = "block";
             })
             .finally(function () {
